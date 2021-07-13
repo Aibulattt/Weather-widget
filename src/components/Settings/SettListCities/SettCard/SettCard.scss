@@ -1,0 +1,48 @@
+%burger-btn {
+    display: block;
+    height: 1px;
+    width: 20px;
+    background-color: #000;
+}
+
+.setcard__btn-burger  {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    span {
+        @extend %burger-btn;
+        position: relative;
+
+        &::after {
+            content: '';
+            @extend %burger-btn;
+            position: absolute;
+            bottom: -4px;
+        }
+
+        &::before {
+            content: '';
+            @extend %burger-btn;
+            position: absolute;
+            top: -5px;
+        }
+    }
+}
+
+.setcard__city {
+    margin: 0;
+}
+
+.setcard__btn-del {
+    display: block;
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../../../assets/delet-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}

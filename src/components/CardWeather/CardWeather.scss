@@ -1,0 +1,57 @@
+.card-weather__btn-settings {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.card-weather__item {
+    display: flex;
+    justify-content: space-between;
+
+    &:nth-child(2) {
+        justify-content: unset;
+    }
+}
+
+.card-weather__img {
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.card-weather__deg {
+    margin-left: 20px;
+    font-size: 32px;
+}
+
+.card-weather__general {
+    width: 260px;
+}
+
+.text-uppercase:first-letter {
+    font-size: 28px !important;
+    color: red;
+}
+
+.card-weather__wind {
+    padding-left: 25px;
+    background-image: url('../../assets/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-weather__pressure {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -25px;
+        width: 20px;
+        height: 20px;
+        display: block;
+        background-image: url('../../assets/bar.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}

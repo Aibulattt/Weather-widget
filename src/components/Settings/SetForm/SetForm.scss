@@ -1,0 +1,31 @@
+.set__form {
+    margin-top: 40px;
+}
+
+.set__input-elem {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.set__input {
+    width: 100%;
+    min-width: 170px;
+    height: 35px;
+    padding-left: 15px;
+    border-color: rgb(50, 94, 236);
+    border-radius: 2px;
+}
+
+.set__btn-add {
+    width: 25px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border: none;
+    background-image: url('../../../assets/enter-icon.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    transform: rotateY(180deg);
+    cursor: pointer;
+}

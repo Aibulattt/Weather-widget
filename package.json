@@ -1,0 +1,58 @@
+{
+  "name": "react-webpack-typescript-babel",
+  "version": "1.0.0",
+  "description": "A sample setup using React, Webpack and Babel to build TypeScript code, and using TypeScript for type-checking.",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "webpack --progress --mode=production",
+    "start": "webpack s --config ./webpack.config.js --mode=development",
+    "start:prod": "npm run build && http-server dist -p 9999 -o"
+  },
+  "author": {
+    "name": "Oleksandr T.",
+    "email": "oleksandr.tarasiuk@outlook.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.14.0",
+    "@babel/plugin-proposal-class-properties": "7.13.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.13.8",
+    "@babel/preset-env": "7.14.0",
+    "@babel/preset-react": "7.13.13",
+    "@babel/preset-typescript": "7.13.0",
+    "@types/react-beautiful-dnd": "^13.1.1",
+    "@types/react-router-dom": "^5.1.8",
+    "babel-loader": "8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^5.2.6",
+    "cssnano": "^5.0.6",
+    "file-loader": "^6.2.0",
+    "fork-ts-checker-webpack-plugin": "6.2.5",
+    "html-webpack-plugin": "5.3.1",
+    "http-server": "0.12.3",
+    "mini-css-extract-plugin": "^2.1.0",
+    "node-sass": "^6.0.1",
+    "postcss": "^8.3.5",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^14.0.2",
+    "postcss-loader": "^6.1.1",
+    "sass-loader": "^12.1.0",
+    "typescript": "4.2.4",
+    "webpack": "5.36.2",
+    "webpack-cli": "4.6.0",
+    "webpack-dev-server": "3.11.2"
+  },
+  "dependencies": {
+    "@types/react": "17.0.4",
+    "@types/react-dom": "17.0.3",
+    "nanoid": "^3.1.23",
+    "react": "17.0.2",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-dom": "17.0.2",
+    "react-js-loader": "0.0.7",
+    "react-loader-spinner": "^4.0.0",
+    "react-router-dom": "^5.2.0"
+  }
+}

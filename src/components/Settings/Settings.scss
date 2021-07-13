@@ -1,0 +1,38 @@
+.set__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.set__title {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+%btn-close {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+}
+
+.set__btn-close {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    span {
+        &::after {
+            @extend %btn-close;
+            transform: rotate(45deg);
+        }
+
+        &::before {
+            @extend %btn-close;
+            transform: rotate(-45deg);
+        }
+    }
+}
