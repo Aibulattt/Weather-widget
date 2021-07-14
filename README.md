@@ -1,6 +1,4 @@
-# React-Webpack-TypeScript-Babel
-
-> This is sample repository demonstrates how to use React, Webpack, TypeScript and Babel
+# Weather
 
 ## Starting the development server
 
