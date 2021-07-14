@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { CitiesContextProvider } from '../context/citiesContext'
 import { LoadingContext } from '../context/loadingContext'
@@ -6,7 +6,7 @@ import { CardList } from './CardList/CardList'
 import { Settings } from './Settings/Settings'
 import './style.scss'
 
-export const App = () => {
+export const App: FC = () => {
   const [loading, setLoading] = useState<boolean>(false)
   return (
     <CitiesContextProvider>

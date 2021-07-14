@@ -8,7 +8,6 @@ interface ICardWeatherProps {
     wind: number,
     pressure: number,
     humidity: number,
-    dew: string,
     visibility: number,
     description: string,
     main: string,
@@ -39,9 +38,6 @@ export const CardWeather = (props: ICardWeatherProps) => {
             </li>
             <li className='card-weather__item'>
                 <p className='card-weather__hummidity'>hummidity:{props.humidity}%</p>
-                <p className='card-weather__dew'>Dew point: {props.dew}</p>
-            </li>
-            <li className='card-weather__item'>
                 <p className='card-weather__visibillity'>Visibillity: {props.visibility/1000}km</p>
             </li>
         </ul>

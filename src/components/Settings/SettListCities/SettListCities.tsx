@@ -1,15 +1,14 @@
-import React, { useContext } from 'react'
+import React, { FC, useContext } from 'react'
 import { CitiesContext, ICitiesContext } from '../../../context/citiesContext'
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
 import { SettCard } from './SettCard/SettCard'
 import './SettListCities.scss'
 
-export const SettListCities = () => {
+export const SettListCities: FC = () => {
     const { cities, setCities } = useContext<ICitiesContext>(CitiesContext)
 
     const removeCity = (id: string) => {
         setCities(cities.filter(city => city.id !== id))
-        localStorage.setItem('cities', JSON.stringify(cities))
     }
 
     const handleOnDragEnd = (result: any) => {

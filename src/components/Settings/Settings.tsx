@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { SettListCities } from './SettListCities/SettListCities'
 import { Link } from 'react-router-dom'
 import { SetForm } from './SetForm/SetForm'
 import './Settings.scss'
 
-export const Settings = () => {
+export const Settings: FC = () => {
     return (
         <div>
             <div className='set__top'>

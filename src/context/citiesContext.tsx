@@ -5,8 +5,6 @@ import {nanoid} from 'nanoid'
 export interface ICitiesContext {
     cities: TCityy[],
     setCities: (city: any) => void,
-    savedCities: TCityy[],
-    setSavedCities: (city: any) => void
 }
 
 export type TCityy = {
@@ -17,22 +15,19 @@ export type TCityy = {
 export const CitiesContext = createContext<ICitiesContext>({
     cities: [],
     setCities: () => {},
-    savedCities: [],
-    setSavedCities: () => {}
 })
 
 export const CitiesContextProvider = ({children} : {children: React.ReactNode}) => {
     const city = useCurrentGeo()
     
     const [cities, setCities] = useState([{city, id: nanoid()}])
-    const [savedCities, setSavedCities] = useState([])
 
     useEffect(() => {
         setCities([{city, id: nanoid()}])
     }, [city])
 
     return (
-        <CitiesContext.Provider value={{cities, setCities, savedCities, setSavedCities}}>
+        <CitiesContext.Provider value={{cities, setCities}}>
             {children}
         </CitiesContext.Provider>
     )

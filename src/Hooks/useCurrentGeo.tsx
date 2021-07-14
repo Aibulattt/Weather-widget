@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 const apiKey = 'AIzaSyBPWhIMbX9ZgMi6t58kiGBND5qa_3txyY4'
 
 
-export const useCurrentGeo = () => {
+export const useCurrentGeo = (): string => {
     const [location, setLocation] = useState<string>('')
 
     useEffect(() => {

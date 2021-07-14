@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { FC, useContext } from 'react'
 import { IDataWeather, useCallWeather } from '../../Hooks/useCallWeather'
 import { CardWeather } from '../CardWeather/CardWeather'
 import { Link } from 'react-router-dom'
@@ -7,7 +7,7 @@ import Loader from "react-loader-spinner";
 import './CardList.scss'
 import { LoadingContext } from '../../context/loadingContext'
 
-export const CardList = () => {
+export const CardList: FC = () => {
     const [dataWeather] = useCallWeather()
     const {loading} = useContext(LoadingContext)
 
@@ -51,7 +51,6 @@ export const CardList = () => {
                             wind={item.wind.speed}
                             pressure={item.main.pressure}
                             humidity={item.main.humidity}
-                            dew='0C'
                             visibility={item.visibility}
                         />
                     </li>
